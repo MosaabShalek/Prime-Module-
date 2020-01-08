@@ -14,4 +14,10 @@ def s_e(n):
     result = [m for m in range(2, n) if primes[m]]
     return result
 
-
+# - is_prime returns True if n is prime otherwise it returs False
+def is_prime(n):
+    counter = 0
+    for i in s_e(int(n**0.5)):
+        if n%i == 0: return False
+        else: counter += 1
+    return True
